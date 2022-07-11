@@ -9,22 +9,32 @@
 */
 
 const themes = {
-    "bright": {
-        "backgroundColor": "lightyellow",
-        "color": "darkgreen"
+    bright: {
+      backgroundColor: "lightyellow",
+      color: "darkgreen",
     },
-    "cool": {
-        "backgroundColor": "lightgray",
-        "color": "indigo"
+    cool: {
+      backgroundColor: "lightgray",
+      color: "indigo",
     },
-    "fiery": {
-        "backgroundColor": "chocolate",
-        "color": "lightgoldenyellow"
+    fiery: {
+      backgroundColor: "chocolate",
+      color: "lightgoldenyellow",
+    },
+  };
+  
+  function changeTheme(event) {
+    if (event.target.id === "bright") {
+      document.body.style.backgroundColor = themes.bright.backgroundColor;
+      document.body.style.color = themes.bright.color;
+    } else if (event.target.id === "cool") {
+      document.body.style.backgroundColor = themes.cool.backgroundColor;
+      document.body.style.color = themes.cool.color;
+    } else if (event.target.id === "fiery") {
+      document.body.style.backgroundColor = themes.fiery.backgroundColor;
+      document.body.style.color = themes.fiery.color;
     }
-}
-
-function changeTheme(event) {
-    
-}
-
-module.exports = changeTheme
+  }
+  
+  module.exports = changeTheme;
+  
